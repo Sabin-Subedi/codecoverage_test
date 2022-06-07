@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test theme button toggle 1`] = `
+<div>
+  <button>
+    Current theme: 
+    dark
+  </button>
+</div>
+`;
