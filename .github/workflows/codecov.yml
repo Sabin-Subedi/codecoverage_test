@@ -9,7 +9,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 13.x, 14.x, 15.x]
+        node-version: [12.x, 13.x, 14.x, 15.x, 16.x]
 
     steps:
       - name: Checkout repository
@@ -28,9 +28,7 @@ jobs:
       - name: Run tests
         run: npm run test:dev
 
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v1
-      -name: Deploy coverage
+      - name: Deploy coverage
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
           folder: coverage/lcov-report
