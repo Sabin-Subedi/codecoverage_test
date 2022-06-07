@@ -14,7 +14,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test":"react-scripts test",
+    "test:dev": "npm test -- --coverage --watchAll",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -34,5 +35,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "jest": {
+    "testMatch": [ "**/tests/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)" ],
+    "coverageReporters": ["json","html","lcov", "text"]
+}
 }
