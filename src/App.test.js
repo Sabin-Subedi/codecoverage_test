@@ -8,4 +8,5 @@ test("Test theme button toggle", () => {
 
   userEvent.click(button);
   expect(button).toHaveTextContent(/dark/i);
+  expect(screen).toMatchSnapshot();
 });
